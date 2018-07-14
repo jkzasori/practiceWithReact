@@ -12,7 +12,7 @@ export const DISHES =
             {
             id: 0,
             rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
+            comment: "I love Uthappizza!",
             author: "John Lemon",
             date: "2012-10-16T17:57:28.556094Z"
             },
@@ -57,7 +57,7 @@ export const DISHES =
             {
             id: 0,
             rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
+            comment: "I wanna Zucchipakoda!",
             author: "John Lemon",
             date: "2012-10-16T17:57:28.556094Z"
             },
@@ -103,7 +103,7 @@ export const DISHES =
             {
             id: 0,
             rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
+            comment: " Vadonut is the better!",
             author: "John Lemon",
             date: "2012-10-16T17:57:28.556094Z"
             },
