@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
-class DishDetail extends Component {
+class DishDetail extends Component { 
     renderComment(dish){
         <div className="col-12 col-md-5 m-1" >
                     <h3>Comments</h3>
@@ -33,7 +33,7 @@ class DishDetail extends Component {
                     {dish.comments.map( (comments) => {
                         return(
                             <div key={comments.id}>
-                            <p>{comments.comment}</p> <p>--{comments.author}, {comments.date}</p>
+                            <p>{comments.comment}</p> <p>--{comments.author}, {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'short', day:'2-digit'}).format( new Date(Date.parse(comments.date)))}</p>
                             </div>
                         )
                     })
@@ -50,10 +50,10 @@ class DishDetail extends Component {
     }
     render(){
         return(
-            <div className="row red" dishdetail={this.props}>
-                <div className="col-12" >
-                    {this.renderDish(this.props.dishdetail)}
-                </div>
+            <div className="container">
+            <div className="" dish={this.props}>
+                    {this.renderDish(this.props.dish)}
+            </div>
             </div>
         );
     }
