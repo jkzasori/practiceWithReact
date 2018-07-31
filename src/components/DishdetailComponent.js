@@ -17,6 +17,11 @@ import { Link } from 'react-router-dom';
             };
             this.toggleModal = this.toggleModal.bind(this);
         }
+        handleSubmit(values){
+            console.log("Current State is: "+JSON.stringify(values));
+            alert("Current State is: "+JSON.stringify(values));
+         
+        }
         toggleModal(){
             this.setState({
                 isModalOpen: !this.state.isModalOpen
@@ -88,7 +93,7 @@ import { Link } from 'react-router-dom';
                     <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                         <ModalHeader toggle={this.toggleModal}>Sunmit Comment</ModalHeader>
                         <ModalBody>
-                            <LocalForm>
+                            <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
                                 <Row className="form-group">
                                     <Col md={12}>
                                         <Label htmlFor="rating">Rating</Label>
